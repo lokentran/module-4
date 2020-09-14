@@ -1,0 +1,22 @@
+<form action="" [formGroup]="formEditList" (ngSubmit)="edit()">
+  <div class="modal-body">
+
+    <div class="form-group">
+      <label >Tag</label>
+      <input type="text" class="form-control" formControlName="tag">
+    </div>
+
+    <div class="form-group">
+      <label >Url</label>
+      <input type="email" class="form-control" formControlName="url">
+    </div>
+    <div class="form-group">
+      <label >Descriptions</label>
+      <!-- <input type="text" class="form-control" formControlName="descriptions"> -->
+      <textarea class="form-control" formControlName="descriptions"></textarea>
+    </div>
+
+  </div>
+  <button class="btn btn-secondary" routerLink="/users">Back</button>
+  <button class="btn btn-primary">Update Awesome</button>
+</form>

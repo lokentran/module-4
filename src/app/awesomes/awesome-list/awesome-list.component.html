@@ -1,0 +1,22 @@
+<h2 class="text-center mb-4">List Awesomes</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Url</th>
+      <th>Description</th>
+      <th colspan="2">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let list of lists; let i = index">
+      <td>{{ list.tag }}</td>
+      <td>{{ list.url }}</td>
+      <td>{{ list.descriptions }}</td>
+      <td><button class="btn btn-primary" [routerLink]="['edit', list.id]" >Edit</button></td>
+      <td><button class="btn btn-danger" (click)="delete(i)">Delete</button></td>
+    </tr>
+  </tbody>
+
+</table>
